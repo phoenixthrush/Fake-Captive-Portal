@@ -1,149 +1,152 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FRITZ!Box</title>
-    <style>
-      body {
-        margin: 0;
-        color: white;
-        font-family: Helvetica, Arial, sans-serif;
-        background-color: rgb(240, 238, 235);
-      }
 
-      .banner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 10svh;
-        background-color: rgb(50, 100, 170);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRITZ!Box</title>
+  <style>
+    body {
+      margin: 0;
+      color: white;
+      font-family: "Source Sans Pro", sans-serif;
+      background-color: rgb(232, 230, 227);
+    }
 
-      .banner p {
-        text-align: center;
-        margin: 0;
-        font-size: clamp(1.4em, 5vw, 3em);
-        font-weight: bold;
-      }
+    .banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 8svh;
+      background-color: rgb(0, 88, 154);
+    }
 
-      #logo {
-        position: absolute;
-        top: 0;
-        left: 50px;
-        transform: translateX(-50%);
-        height: 10svh;
-      }
+    .banner p {
+      text-align: center;
+      margin: 0;
+      font-size: clamp(1.2em, 4vw, 2.5em);
+      font-weight: bold;
+    }
 
-      .content {
-        display: flex;
-        height: 90svh;
-        justify-content: center;
-        align-items: center;
-      }
+    #logo {
+      position: absolute;
+      top: 0;
+      left: 0.8em;
+      max-height: 10svh;
+    }
 
-      .login {
-        min-width: 40vw;
-        min-height: 40vh;
-        max-width: 500px;
-        justify-content: center;
-        color: rgb(90, 90, 90);
-        background-color: white;
-      }
+    .content {
+      display: flex;
+      height: 90svh;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .login p {
-        padding-left: 1.2em;
-        font-size: 1.15em;
-      }
+    .login {
+      min-width: 40vw;
+      min-height: 40vh;
+      max-width: 500px;
+      justify-content: center;
+      color: rgb(90, 90, 90);
+      background-color: white;
+    }
 
-      .login a {
-        text-decoration: none;
-        color: rgb(60, 120, 180);
-      }
+    .login p {
+      padding-left: 1.2em;
+      font-size: 1.15em;
+    }
 
-      .login-banner {
-        background-color: rgb(60, 140, 200);
-        min-height: 8svh;
-        text-align: left;
-        display: flex;
-        align-items: center;
-        color: white;
-        margin-bottom: 2em;
-      }
+    .login a {
+      text-decoration: none;
+      color: rgb(60, 120, 180);
+    }
 
-      .login-banner p {
-        font-size: clamp(1.2em, 4vw, 1.6em);
-        margin: 0;
-        padding-left: 0.8em;
-      }
+    .login-banner {
+      background-color: rgb(0, 88, 154);
+      min-height: 8svh;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      color: white;
+      margin-bottom: 2em;
+    }
 
-      .password {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-right: 1.5em;
-        margin-top: 5svh;
-        margin-bottom: 6svh;
-      }
+    .login-banner p {
+      font-size: clamp(1.2em, 4vw, 1.6em);
+      margin: 0;
+      padding-left: 0.8em;
+    }
 
-      .password p {
-        margin: 0;
-      }
+    .password {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 1.5em;
+      margin-top: 5svh;
+      margin-bottom: 6svh;
+    }
 
-      .password input {
-        padding: 0.5em;
-        font-size: 1em;
-        width: 60%;
-        border: 1px solid gray;
-      }
+    .password p {
+      margin: 0;
+    }
 
-      .login-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 1em;
-      }
+    .password input {
+      padding: 0.5em;
+      font-size: 1em;
+      width: 60%;
+      border: 1px solid gray;
+    }
 
-      .login-footer p {
-        margin: 0;
-      }
+    .login-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1em;
+    }
 
-      .login-footer button {
-        width: 25%;
-        padding: 0.6em;
-        font-size: 1em;
-        cursor: pointer;
-        margin-right: 1.5em;
-        background-color: rgb(60, 140, 200);
-        color: white;
-      }
-    </style>
-  </head>
+    .login-footer p {
+      margin: 0;
+    }
 
-  <body>
-    <div class="banner">
-      <img src="logo.png" id="logo" />
-      <p>FRITZ!Box 7560 XS</p>
-    </div>
+    .login-footer button {
+      width: 25%;
+      padding: 0.6em;
+      font-size: 1em;
+      cursor: pointer;
+      margin-right: 1.5em;
+      background-color: rgb(0, 88, 154);
+      color: white;
+    }
+  </style>
+</head>
 
-    <div class="content">
-      <div class="login">
-        <div class="login-banner">
-          <p>Willkommen bei Ihrer FRITZ!Box</p>
-        </div>
-        <p>Bitte melden Sie sich mit Ihrem Kennwort an.</p>
-        <form action="login.php" method="POST">
-          <div class="password">
-            <p>FRITZ!Box Kennwort</p>
-            <input type="password" name="password" id="password" required />
-          </div>
-          <hr />
-          <div class="login-footer">
-            <p><a href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7560/285_Kennwort-fur-die-Benutzeroberflache-der-FRITZ-Box-vergessen/">Kennwort vergessen?</a></p>
-            <button type="submit">Anmelden</button>
-          </div>
-        </form>
+<body>
+  <div class="banner">
+    <img src="logo.png" id="logo" />
+    <p>FRITZ!Box 7560 XS</p>
+  </div>
+
+  <div class="content">
+    <div class="login">
+      <div class="login-banner">
+        <p>Willkommen bei Ihrer FRITZ!Box</p>
       </div>
+      <p>Bitte melden Sie sich mit Ihrem Kennwort an.</p>
+      <form action="login.php" method="POST">
+        <div class="password">
+          <p>FRITZ!Box Kennwort</p>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <hr />
+        <div class="login-footer">
+          <p><a
+              href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7560/285_Kennwort-fur-die-Benutzeroberflache-der-FRITZ-Box-vergessen/">Kennwort
+              vergessen?</a></p>
+          <button type="submit">Anmelden</button>
+        </div>
+      </form>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
